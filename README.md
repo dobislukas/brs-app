@@ -3,6 +3,7 @@
 Recommend similar books based on your query in form of book title.
 
 Currently (temporarily) hosted on: https://brs-app.onrender.com/
+(Warning: Render shutdowns non active web applications, so contact author for restart)
 
 Number of supported book titles is limited but can be browsed in "List of books" part of webpage.
 
