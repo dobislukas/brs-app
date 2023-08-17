@@ -1,0 +1,28 @@
+# Ignore hidden files and directories
+.*
+!.gitignore   # Preserve .gitignore file
+!.dockerignore # Preserve .dockerignore file
+
+# Ignore specific files
+Dockerfile    # We don't want to include the Dockerfile in the image
+README.md     # Ignore the readme file
+LICENSE       # Ignore license files if you have any
+
+# Ignore directories
+node_modules/ # Ignore Node.js dependencies
+vendor/       # Ignore PHP dependencies
+bin/          # Ignore binary files
+obj/          # Ignore compiled object files
+dist/         # Ignore build output
+tmp/          # Ignore temporary files
+logs/         # Ignore log files
+
+# Ignore development and test files
+*.log
+*.debug
+*.test
+*.spec
+
+# Ignore version control directories
+.git/
+.svn/
