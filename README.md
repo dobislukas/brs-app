@@ -1,1 +1,1 @@
-# brs-app
+# book-recommendation-system
