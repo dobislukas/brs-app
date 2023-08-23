@@ -1,0 +1,10 @@
+version: "3"
+services:
+  brs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Path to your Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/app
