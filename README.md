@@ -18,30 +18,30 @@ Number of supported book titles is limited but can be browsed in "List of books"
           of upscaled arbitrary book recommendation solution.
 
 ## How to run
-
-### Local - without docker
-
+### Without docker
 1.  Install packages from requirements.txt 
 2.  Run following code inside app directory
-
 ```
 sudo uvicorn main:app --host 0.0.0.0 --port 80 --reload
 ```
 3. Webpage is now available on your device at http://0.0.0.0:80
-
-### Local - with docker
-1. Inside project directory build image container.
+### With docker
+1. Inside project directory build image container
 ```
 docker build . -t brs-image
 ```
-2. Inside project directory build image container.
+2. Inside project directory build image container
 ```
 docker run -p 80:80 brs-image
 ```
 3. Webpage is now available on your device at http://0.0.0.0:80
-
+### With docker compose
+1. Inside project directory build image container.
+```
+sudo docker-compose up -d
+```
+2. Webpage is now available on your device at http://0.0.0.0:80
 ### Links
 Webpage: https://brs-app.onrender.com/
 
 Book-Crossing Dataset: http://www2.informatik.uni-freiburg.de/~cziegler/BX/
-
