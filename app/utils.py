@@ -1,10 +1,13 @@
 # Imports
 from typing import List, Dict
+
+import numpy as np
+
 from sklearn.neighbors import NearestNeighbors
 
 
 def get_k_nearest_neighbours_model(
-        embeddings, metric="cosine") -> NearestNeighbors:
+        embeddings: np.ndarray, metric: str = "cosine") -> NearestNeighbors:
     """
     Return KNN model with its neighbor vectors set to provided embeddings.
 
@@ -18,7 +21,10 @@ def get_k_nearest_neighbours_model(
     return knn_model
 
 
-def get_k_neighbours_for_vector(vector, knn_model, k=5) -> List[int]:
+def get_k_neighbours_for_vector(
+        vector: np.ndarray,
+        knn_model: NearestNeighbors,
+        k: int = 5) -> List[int]:
     """
     Return prediction of K nearest vectors for
     input numerical vector by KNN model.
@@ -35,7 +41,9 @@ def get_k_neighbours_for_vector(vector, knn_model, k=5) -> List[int]:
 
 
 def get_k_recommendations_for_set_of_ids(
-        set_of_ids, embeddings, k) -> Dict[int, List[int]]:
+        set_of_ids: List[int],
+        embeddings: np.ndarray,
+        k: int = 5) -> Dict[int, List[int]]:
     """
     Return K book recommendations for each book ID in inputted set.
 
